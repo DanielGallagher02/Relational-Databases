@@ -1,0 +1,78 @@
+/* CA   
+Daniel Gallagher
+L00158616
+*/
+
+-- Question 1 --
+SELECT *
+FROM book
+WHERE PRICE < 10.00
+AND PAPERBACK = 'Y';
+
+-- Question 2 --
+SELECT PUBLISHER_NAME, CITY
+FROM publisher
+WHERE CITY = 'Boston' 
+OR CITY = 'Los Angeles'
+AND NOT CITY = 'New York';
+
+-- Question 3 --
+SELECT BOOK_CODE, TITLE, PUBLISHER_CODE, PUBLISHER_NAME
+FROM book, publisher;
+
+-- Question 4 --
+SELECT BOOK_CODE, TITLE, AUTHOR_FIRST, AUTHOR_LAST, PRICE, PUBLISHER_NAME
+FROM book, publisher, author
+WHERE PUBLISHER_NAME = 'Plume'
+AND PRICE > 14.00;
+
+-- Question 5 --
+SELECT BOOK_CODE, TITLE, AUTHOR_LAST, PRICE
+FROM book b, author, branch
+WHERE b.PRICE = PRICE * .80
+AND BRANCH_NUM = 4;
+ 
+-- Question 6 --
+SELECT PRICE, TYPE, PAPERBACK
+FROM book
+WHERE PRICE
+AND PAPERBACK = 'Y';
+
+-- Question 7 --
+SELECT *
+FROM publisher
+WHERE CITY = 'Boston'
+AND PUBLISHER_CODE = 'AP'
+OR PUBLISHER_CODE = 'AH';
+
+-- Question 8 --
+SELECT BOOK_CODE, BRANCH_NUM, BRANCH_NAME, ON_HAND
+FROM book, branch B, inventory I
+WHERE B.BOOK_CODE = I.BOOK_CODE
+AND NOT BRANCH_NUM = 2;
+
+-- Question 9 --
+SELECT PUBLISHER_NAME
+FROM publisher
+WHERE PUBLISHER_NAME LIKE 'p%'
+AND NOT PUBLISHER_NAME LIKE '%ing';
+
+-- Question 10 --
+SELECT *
+FROM book, publisher
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
